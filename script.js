@@ -2,7 +2,7 @@ function showWelcomeMessage() {
   alert(`Welcome to ${storeName}! Enjoy ${discount}% off all products today!`);
 }
 
-// Making the button interactive
+// Making the ShopNow button interactive
 const shopNowBtn = document.querySelector("button");
 shopNowBtn.addEventListener("click", showWelcomeMessage);
 
@@ -34,3 +34,10 @@ products.forEach((product) => {
 });
 
 
+// Hambugermenu added
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});

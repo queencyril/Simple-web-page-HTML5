@@ -257,3 +257,48 @@ footer {
     
   }
 }
+
+/* HamburgerMenu */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: #d48806;
+  cursor: pointer;
+}
+
+/* Show hamburger on mobile screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #222;
+    padding: 15px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    color: #d48806;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  nav a:hover {
+    color: white;
+  }
+}
+

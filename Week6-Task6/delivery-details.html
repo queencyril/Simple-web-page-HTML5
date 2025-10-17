@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delivery Detials Form - LuQueens Collection</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+  
+    <header>
+      <h1>Save your delivery details With LuQueens Collection</h1>
+      <nav>
+        <a href="index.html">Home</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <h2 class="delivery-title">Delivery Details</h2>
+      <form
+        onsubmit="alert('✅ Thank you, your delivery-details has been sent!')"
+        action="https://formspree.io/f/mqayzdag"
+        method="POST"
+      >
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fullname">Full Name:</label><br />
+          <input type="text" id="fullname" name="fullname" class="input-details" /><br /><br />
+
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" class="input-details" required /><br /><br />
+
+          <label for="phone">Phone Number:</label><br />
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{11}"
+            class="input-details"
+            required
+          /><br /><br />
+
+          <label>Gender:</label><br />
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label><br /><br />
+        </fieldset>
+
+        <fieldset>
+          <legend>Delivery Preferences</legend>
+
+          <label for="date">Delivery Date:</label><br />
+          <input type="date" id="date" name="date" class="input-details" required /><br /><br />
+
+          <label for="time">Preferred Time:</label><br />
+          <input type="time" id="time" name="time" class="input-details" /><br /><br />
+
+          <label for="service">Service Type:</label><br />
+          <select name="service" id="service" class="input-details" required>
+            <option value="">Select a service</option>
+            <option value="shipping">Shipping</option>
+            <option value="delivery">Delivery</option>
+            <option value="pickup">Pickup</option>
+          </select><br /><br />
+
+          <label for="notes">Additional Notes:</label><br />
+          <textarea
+            id="notes"
+            name="notes"
+            rows="4"
+            cols="40"
+            class="input-details"
+            placeholder="Enter delivery instructions..."
+          ></textarea><br /><br />
+        </fieldset>
+
+        <label>
+          <input type="checkbox" name="terms" required />
+          I agree to the <a href="#">terms and conditions</a>
+        </label><br /><br />
+
+        <button type="submit">Submit Details</button>
+      </form>
+    </main>
+
+  
+    <footer>
+      <p>@ 2025 LuQueens Collection </p>
+    </footer>
+  </body>
+</html>
